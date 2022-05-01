@@ -50,4 +50,11 @@ public class CandidatoController {
         List<Candidato> candidatosFiltrados = service.buscaPersonalizada(filter);
         return ResponseEntity.ok().body(candidatosFiltrados);
     }
+
+    @DeleteMapping("/deleteAll")
+    public ResponseEntity<?> deleteAll(){
+        service.deleteAll();
+
+        return ResponseEntity.noContent().build();
+    }
 }

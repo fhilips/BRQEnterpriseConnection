@@ -104,4 +104,8 @@ public class CandidatoService {
                                 .count()
                 ));
     }
+
+    public void deleteAll() {
+        candidatoRepository.deleteAll();
+    }
 }
