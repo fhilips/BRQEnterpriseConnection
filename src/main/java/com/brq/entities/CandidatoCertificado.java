@@ -9,6 +9,7 @@ import javax.persistence.*;
 @Setter
 @ToString
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "candidato_certificado")
 public class CandidatoCertificado {
@@ -18,7 +19,7 @@ public class CandidatoCertificado {
     private Long id;
 
     @JsonIgnore
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "candidato_id")
     private Candidato candidato;
 

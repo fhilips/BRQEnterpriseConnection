@@ -9,6 +9,7 @@ import javax.persistence.*;
 @Setter
 @ToString
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "candidato_skill")
 public class CandidatoSkill {
@@ -18,7 +19,7 @@ public class CandidatoSkill {
     private Long id;
 
     @JsonIgnore
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "candidato_id")
     private Candidato candidato;
 

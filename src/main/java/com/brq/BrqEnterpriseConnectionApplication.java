@@ -30,28 +30,28 @@ public class BrqEnterpriseConnectionApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Skill s1 = new Skill();
-		Candidato c1 = new Candidato();
-		Certificado ct1 = new Certificado();
-
-		CandidatoSkill ck = new CandidatoSkill();
-		ck.setCandidato(c1);
-		ck.setSkill(s1);
-
-		CandidatoCertificado cc = new CandidatoCertificado();
-		cc.setCandidato(c1);
-		cc.setSkill(s1);
-		cc.setCertificado(ct1);
-
-		List<CandidatoSkill> list = Arrays.asList(ck);
-		List<CandidatoCertificado> listCert = Arrays.asList(cc);
-
-		c1.setCandidatoSkills(list);
-		c1.setCandidatoCertificados(listCert);
-
-		repoCert.save(ct1);
-		repoSkill.save(s1);
-		repo.save(c1);
+//		Skill s1 = new Skill();
+//		Candidato c1 = new Candidato();
+//		Certificado ct1 = new Certificado();
+//
+//		CandidatoSkill ck = new CandidatoSkill();
+//		ck.setCandidato(c1);
+//		ck.setSkill(s1);
+//
+//		CandidatoCertificado cc = new CandidatoCertificado();
+//		cc.setCandidato(c1);
+//		cc.setSkill(s1);
+//		cc.setCertificado(ct1);
+//
+//		List<CandidatoSkill> list = Arrays.asList(ck);
+//		List<CandidatoCertificado> listCert = Arrays.asList(cc);
+//
+//		c1.setCandidatoSkills(list);
+//		c1.setCandidatoCertificados(listCert);
+//
+//		repoCert.save(ct1);
+//		repoSkill.save(s1);
+//		repo.save(c1);
 
 
 	}
