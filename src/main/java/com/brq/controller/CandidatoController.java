@@ -45,16 +45,25 @@ public class CandidatoController {
         return ResponseEntity.created(uri).body(novoCandidato);
     }
 
-    @GetMapping("/buscarFiltrado")
-    public ResponseEntity<List<Candidato>> buscaPersonalizada(CandidatoFilter filter){
-        List<Candidato> candidatosFiltrados = service.buscaPersonalizada(filter);
-        return ResponseEntity.ok().body(candidatosFiltrados);
-    }
-
     @DeleteMapping("/deleteAll")
     public ResponseEntity<?> deleteAll(){
         service.deleteAll();
 
         return ResponseEntity.noContent().build();
+    }
+
+    /**
+     * Consulta dinâmica com parâmetros opcionais.
+     * Os parametros disponíveis estão contidos na classe {@Link CandidatoFilter}.
+     * Quando uma busca com o parâmetro "nomeSkill" é realizada, os candidatos com
+     * mais certificados com essa skill são exibidos primeiro.
+     *
+     * @param filter
+     * @return
+     */
+    @GetMapping("/buscarFiltrado")
+    public ResponseEntity<List<Candidato>> buscaPersonalizada(CandidatoFilter filter){
+        List<Candidato> candidatosFiltrados = service.buscaPersonalizada(filter);
+        return ResponseEntity.ok().body(candidatosFiltrados);
     }
 }

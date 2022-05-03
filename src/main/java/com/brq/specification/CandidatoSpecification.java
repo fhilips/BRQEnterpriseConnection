@@ -10,6 +10,10 @@ import javax.persistence.criteria.Predicate;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Classe que montará a query dinâmica na busca pelos candidatos
+ *
+ */
 @Component
 public class CandidatoSpecification {
 

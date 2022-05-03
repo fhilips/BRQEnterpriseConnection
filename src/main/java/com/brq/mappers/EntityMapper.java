@@ -1,11 +1,13 @@
 package com.brq.mappers;
 
-import com.brq.entities.Candidato;
-import com.brq.entities.Certificado;
-import com.brq.entities.Skill;
+import com.brq.entities.*;
 import com.brq.vos.CandidatoVO;
 import com.brq.vos.CertificadoVO;
 import com.brq.vos.SkillVO;
+
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 
 public class EntityMapper {
@@ -36,4 +38,5 @@ public class EntityMapper {
         entity.setCodigo(cvo.getCodigo());
         return entity;
     }
+
 }
